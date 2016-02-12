@@ -1,5 +1,17 @@
-$(document).ready(function(){
-  $('.your-class').slick({
-    setting-name: setting-value;
-  });
-});
+(function() {
+    $('form > input').keyup(function() {
+
+        var empty = false;
+        $('form > input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#mySubmit').addClass('ui-disabled');
+        } else {
+            $('#mySubmit').removeClass('ui-disabled');
+        }
+    });
+})
