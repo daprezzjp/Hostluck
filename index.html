@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- Important Owl stylesheet -->
+<link rel="stylesheet" href="/owl.carousel/owl-carousel/owl.carousel.css">
+
+<!-- Default Theme -->
+<link rel="stylesheet" href="/owl.carousel/owl-carousel/owl.theme.css">
+
+<!-- Include js plugin -->
+<script src="/owl.carousel/assets/owl-carousel/owl.carousel.js"></script>
+
+<script src="style.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!-------------------------------------Splash Page------------------------------------------>
@@ -22,7 +33,7 @@
     </div>
 
     <div data-role="footer" data-position="fixed">
-      <h3>Shmerling, Nguyen, Holeman & Co.</h3>
+      <h1>Shmerling, Nguyen, Holeman & Co.</h1>
     </div>
   </div>
 <!-------------------------------------Signup Page--------------------------------------->
@@ -43,8 +54,8 @@
     <input type="text" name="fname" id="fname" placeholder="First Name">
     <label for="lname" class="ui-hidden-accessible">Lastname</label>
     <input type="text" name="lname" id="lname" placeholder="Last Name">
-    <label for="fname" class="ui-hidden-accessible">Username</label>
-    <input type="text" name="uname" id="uname" placeholder="Username">
+    <label for="fname" class="ui-hidden-accessible">Email</label>
+    <input type="text" name="uname" id="uname" placeholder="Email">
     <label for="lname" class="ui-hidden-accessible">Password</label>
     <input type="text" name="pw" id="pw" placeholder="Password">
     </form>
@@ -70,8 +81,8 @@
 
   <div data-role="main" class="ui-content">
     <form method="post" action="demoform.asp">
-    <label for="username" class="ui-hidden-accessible">Username</label>
-    <input type="text" name="fname" id="fname" placeholder="Username">
+    <label for="username" class="ui-hidden-accessible">Email</label>
+    <input type="text" name="fname" id="fname" placeholder="Email">
     <label for="password" class="ui-hidden-accessible">Password</label>
     <input type="text" name="lname" id="lname" placeholder="Password">
     </form>
@@ -118,23 +129,74 @@
   </div>
 
   <div data-role="main" class="ui-content">
+    <h1>Host an Event</h1>
     <form method="post" action="demoform.asp">
-    <label for="eventname" class="ui-hidden-accessible">Event Name</label>
-    <input type="text" name="fname" id="fname" placeholder="Event Name">
-    <label for="phonenumber" class="ui-hidden-accessible">Phone Number</label>
-    <input type="text" name="lname" id="lname" placeholder="Phone Number">
-    <label for="street" class="ui-hidden-accessible">Street Address</label>
-    <input type="text" name="st" id="st" placeholder="Street Address">
-    <label for="city" class="ui-hidden-accessible">City</label>
-    <input type="text" name="citi" id="citi" placeholder="City">
-    <label for="state" class="ui-hidden-accessible">State</label>
-    <input type="text" name="state" id="state" placeholder="State">
-    <label for="zip" class="ui-hidden-accessible">Zip Code</label>
-    <input type="text" name="zipcode" id="zipcode" placeholder="Zip Code">
-    <label for="date" class="ui-hidden-accessible">Date</label>
-    <input type="text" name="date" id="date" placeholder="Date">
-    <label for="time" class="ui-hidden-accessible">Time</label>
-    <input type="text" name="time" id="time" placeholder="Time">
+    <label for="eventname" class="ui-hidden-accessible">Name Your Event</label>
+    <input type="text" name="fname" id="fname" placeholder="Name Your Event">
+    <label for="date" class="ui-hidden-accessible">Date of Event</label>
+    <input type="text" name="date" id="date" placeholder="Date of Event">
+    <label for="time" class="ui-hidden-accessible">Time of Event</label>
+    <input type="text" name="time" id="time" placeholder="Time of Event">
+    </form>
+    <input type="submit" value="Submit">
+    <a href="#pickmeal" class="ui-btn ui-corner-all">Test to Next Page</a>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h3>Shmerling, Nguyen, Holeman & Co.</h3>
+  </div>
+</div>
+<!-------------------------------------PickMeal Page--------------------------------------->
+<div data-role="page" id="pickmeal">
+  <div data-role="header">
+    <h1>HostLuck</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#anylink" data-rel="back" data-icon="arrow-l"></a></li>
+        <li><a href="#home" data-icon="home"></a></li>
+        <li><a href="#anylink" data-icon="bars"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <h1>Pick Your Meal!</h1>
+    <div id="owl-demo" class="owl-carousel owl-theme">
+
+  <div class="item"><img src="assets/image1.jpg" alt="The Last of us"></div>
+  <div class="item"><img src="assets/image2.jpg" alt="GTA V"></div>
+  <div class="item"><img src="assets/image3.jpg" alt="Mirror Edge"></div>
+
+</div>
+    <input type="submit" value="Submit">
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h3>Shmerling, Nguyen, Holeman & Co.</h3>
+  </div>
+</div>
+<!-------------------------------------HostAddress Page--------------------------------------->
+<div data-role="page" id="hostaddress">
+  <div data-role="header">
+    <h1>HostLuck</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#anylink" data-rel="back" data-icon="arrow-l"></a></li>
+        <li><a href="#home" data-icon="home"></a></li>
+        <li><a href="#anylink" data-icon="bars"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <h1>What's the Address?</h1>
+    <form method="post" action="demoform.asp">
+    <label for="eventname" class="ui-hidden-accessible">Street</label>
+    <input type="text" name="fname" id="fname" placeholder="Name Your Event">
+    <label for="date" class="ui-hidden-accessible"></label>
+    <input type="text" name="date" id="date" placeholder="Date of Event">
+    <label for="time" class="ui-hidden-accessible">Time of Event</label>
+    <input type="text" name="time" id="time" placeholder="Time of Event">
     </form>
     <input type="submit" value="Submit">
   </div>
